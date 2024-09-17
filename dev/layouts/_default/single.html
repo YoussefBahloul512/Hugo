@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p> هذا قالب فردي </p>
+    {{ $test:= "variable test" }}
+    {{ $MyName:= .Params.MyName}}
+
+    <br> <hr>
+    {{$test := "variable test"}} 
+    {{$MyName := "variable test"}} <br>
+    <br>
+    {{ .Title }}
+    {{ .Content }}
+    {{ .Description }}
+    {{ .File.Path }} -->
+
+
+    {{/*  {{ partial "header.html" . }}
+    {{ partial "footer.html" . }}
+    {{ .Params.root }}
+    {{ .Params.owner }}
+    {{  .Content }}
+    {{ range .Site.Data.product }}
+        <div>
+            <h1>{{ .name }}</h1>
+            <p>{{ .desc }}</p>
+        </div>
+    {{ end }}
+    {{ partial "hero.html" . }}  */}}
+
+    {{/*  {{ $test := 10  }}
+    {{ if gt $test 20}}
+        <h1> القيمة أكبر من 20 </h1>
+    
+    {{ else if eq $test 20}}
+        <h1> القيمة تساوي 20 </h1>
+
+    {{ else }}
+        <h1> القيمة أصغر من 20 </h1>
+    {{ end }}  */}}
+
+    {{/*  {{ $test := 15 }}
+    {{ if or (eq $test 12) (eq $test 15) }}
+
+    <h1> القيمة أكبر من 10 </h1>
+        
+    {{ end }}  */}}
+
+    {{ $targetTitle := "Hello" }}
+    {{ $titel := "Hello" }}
+    {{ $targetValue:= "Test" }}
+    {{ $value := "Test" }}
+
+    {{ if and (eq $titel $targetTitle) (eq $value $targetValue) }}
+        <h1> تم استخدام and بنجاح </h1>
+
+    {{ else }}
+        <h1> هناك خطأ </h1>
+    {{ end }}
+
+
+</body>
+</html>

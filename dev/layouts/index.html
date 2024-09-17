@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {{ range first 2 .Pages }} 
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+
+    <br>
+
+    {{ range last 2 .Pages }} 
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end  }}   
+
+    <br>
+
+    {{ range where .Site.RegularPages "Section" "test-folder" }}
+        <a href="{{ .URL }}"> {{ .Title }} </a>
+    {{ end }}
+
+    <br>
+    {{ add 3 5 }} <!-- الجمع  -->
+    <br>
+    {{ sub 10 8 }}  
+    <br>
+    {{ truncate 10 "هذا مجرد نص تجريبي" }} <!-- Removed leading space -->
+</body>
+</html>
